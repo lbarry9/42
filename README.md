@@ -10,7 +10,7 @@ So far, I've said so long to:
 - so long (and thank you for the fish)
 - a large portion of my sanity
 
-Side Projects log:
+Side Projects:
 - prof d'alpbétisation en français for a charity on Thursday evenings
 - English tutoring
 - started teaching coding workshops for kids with Magic Makers from 09/2023
