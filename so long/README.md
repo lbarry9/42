@@ -1,5 +1,5 @@
-# So long is a small 2D game using the MiniLibx library.
-## Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to amben-ha for keeping me sane.
+#A small 2D game using the MiniLibx library.
+##Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to amben-ha for keeping me sane.
 Don't be fooled by it's cute pacman-esque exterior, this project is about 20% annoying downloading / optimised makefiling, 10% coding, and 70% parsing, debugging and restructuring.
 Or it was for me, anyway.
 
