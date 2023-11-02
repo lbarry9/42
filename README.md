@@ -1,5 +1,5 @@
 # 42
-A collection of my projects from the école 42 curriculum. Rentrée 05/2023.
+## A collection of my projects from the école 42 curriculum. Rentrée 05/2023.
 After surviving the _piscine_, now the real challenge begins. Let's see how long it takes me to get through the infamous _common core_...
 
 So far, I've said so long to:
