@@ -5,7 +5,8 @@ Or it was for me, anyway.
 
 Definitely feeling the fatigue of finally being thrown into the reality of coding culture rather than tiptoeing round the edges.
 - I watched the Hitchiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
-- Unlocked a new level of debugging thanks to some lldb tips. Discovered new valgrind comands and the joys of funchecking your mallocs. (check ur gnl)
+- I unlocked a new level of debugging thanks to some lldb tips.
+- I discovered new valgrind comands and the joys of funchecking your mallocs. (check ur gnl)
 - I even recoded my 2D game on scratch to use in one of my kids coding workshops. Accidentally becoming crazy bee lady.
 And everything took me 128537 times longer than I thought it would.
 But at least it looks cute.
