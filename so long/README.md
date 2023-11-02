@@ -4,7 +4,7 @@ Don't be fooled by it's cute pacman-esque exterior, this project is about 20% an
 Or it was for me, anyway.
 
 Definitely feeling the fatigue of finally being thrown into the reality of coding culture rather than tiptoeing round the edges.
-- I watched the Hitchiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
+- I watched The Hitchhiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
 - I unlocked a new level of debugging thanks to some pals' lldb tips.
 - I discovered new valgrind comands and the joys of funchecking your mallocs. (check ur gnl)
 - I even recoded my 2D game on scratch to use in one of my kids coding workshops. Accidentally becoming crazy bee lady.
