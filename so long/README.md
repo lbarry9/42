@@ -11,4 +11,3 @@ And everything took me 128537 times longer than I thought it would.
 But at least it looks cute.
 
 ![Screenshot from 2023-10-27 21-09-44](https://github.com/lbarry9/42/assets/127246677/9da3f3da-f48f-4a83-941f-24a1ffa119ce)
-![Screenshot from 2023-10-27 21-08-53](https://github.com/lbarry9/42/assets/127246677/51b3efce-abae-43f3-bf20-71fd622c28cf)
