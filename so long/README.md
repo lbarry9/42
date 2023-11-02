@@ -7,7 +7,7 @@ Definitely feeling the fatigue of finally being thrown into the reality of codin
 - I watched The Hitchhiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
 - I unlocked a new level of debugging thanks to some pals' lldb tips.
 - I discovered new valgrind comands and the joys of funchecking your mallocs. (check ur gnl)
-- I even recoded my 2D game on scratch to use in one of my kids coding workshops. Accidentally becoming crazy bee lady.
+- I even recoded my 2D game on [Scratch](https://scratch.mit.edu/projects/895042965) to use in one of my kids coding workshops. Accidentally becoming crazy bee lady.
 And everything took me 128537 times longer than I thought it would.
 But at least it looks cute.
 
