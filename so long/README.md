@@ -1,5 +1,5 @@
 # A small 2D game using the MiniLibx library.
-## Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to amben-ha for keeping me sane.
+
 Don't be fooled by it's cute pacman-esque exterior, this project is about 20% annoying downloading / optimised makefiling, 10% coding, and 70% parsing, debugging and restructuring.
 Or it was for me, anyway.
 
@@ -14,5 +14,9 @@ But at least it looks cute.
 
 ![Screenshot from 2023-10-27 21-09-44](https://github.com/lbarry9/42/assets/127246677/9da3f3da-f48f-4a83-941f-24a1ffa119ce)
 
+Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to amben-ha for keeping me sane.
+
 Reading:
 Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin
+_"What is a programmer?" Emily asked.
+"A programmer is a deviner of possible outcomes, and a seer of unseen worlds."_
