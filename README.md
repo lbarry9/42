@@ -1,6 +1,6 @@
 # 42
 ## A collection of my projects from the école 42 curriculum. Rentrée 05/2023.
-After surviving the _piscine_, now the real challenge begins. Let's see how long it takes me to get through the infamous _common core_...
+After surviving the _piscine_, now the real challenge begins. Let's see how long it takes a novice to get through the infamous _common core_...
 
 So far, I've said so long to:
 - my libft library
@@ -11,7 +11,7 @@ So far, I've said so long to:
 - a large portion of my sanity
 
 Side Projects:
-- weekly French literacy classes for a small charity
+- weekly French literacy classes for a charity in Paris 13eme
 - English tutoring
 - started teaching coding workshops for kids with Magic Makers from 09/2023
 - enrolled for a year of Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
