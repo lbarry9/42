@@ -13,7 +13,7 @@ But at least it looks cute.
 
 ![Screenshot from 2023-10-27 21-09-44](https://github.com/lbarry9/42/assets/127246677/9da3f3da-f48f-4a83-941f-24a1ffa119ce)
 
-Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to amben-ha for keeping me sane.
+Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to this [article](https://reactive.so/post/42-a-comprehensive-guide-to-so_long) for insight and guidance. Thanks to amben-ha for keeping me sane.
 
 Reading:
 Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin
