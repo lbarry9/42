@@ -18,7 +18,8 @@ Side Projects:
 - helping subtitle my friend's adventure documentary film (FR -> EN)
 
 Book Club:
-- (forever dipping in and out of) Invisible Women by Caroline Criado-Perez
-- On Earth We Are Briefly Gorgeous by Ocean Vuong
-- Love From The Pink Palace by Jill Nalder
-- Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin
+- (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
+- _On Earth We Are Briefly Gorgeous_ by Ocean Vuong
+- _Love From The Pink Palace_ by Jill Nalder
+- _Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin
+- _The Goldfinch_ by Donna Tarrt
