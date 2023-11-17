@@ -1,6 +1,6 @@
 # A small 2D game using the MiniLibx library.
 
-Don't be fooled by it's cute pacman-esque vibe, this project is about 20% annoying installation / optimised makefiling, 10% coding, and 70% parsing, debugging and restructuring. Or it was for me, anyway.
+Don't be fooled by it's cute pacman-esque vibe, this project is about 20% annoying installation / optimised makefiling, 10% coding with the MLX library, and 70% parsing, debugging memory leaks and restructuring for the norminette. Or it was for me, anyway.
 
 Definitely feeling the fatigue of finally being thrown into the reality of coding culture rather than tiptoeing round the edges.
 - I watched The Hitchhiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
