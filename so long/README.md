@@ -17,5 +17,6 @@ Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free s
 
 Reading:
 Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin
+
 _"What is a programmer?" Emily asked.
 "A programmer is a deviner of possible outcomes, and a seer of unseen worlds."_
