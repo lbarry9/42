@@ -1,13 +1,12 @@
 # A small 2D game using the MiniLibx library.
 
-Don't be fooled by it's cute pacman-esque exterior, this project is about 20% annoying downloading / optimised makefiling, 10% coding, and 70% parsing, debugging and restructuring.
-Or it was for me, anyway.
+Don't be fooled by it's cute pacman-esque vibe, this project is about 20% annoying installation / optimised makefiling, 10% coding, and 70% parsing, debugging and restructuring. Or it was for me, anyway.
 
 Definitely feeling the fatigue of finally being thrown into the reality of coding culture rather than tiptoeing round the edges.
 - I watched The Hitchhiker's Guide to the Galaxy and now finally get all the chat about towels and dolphins.
 - I unlocked a new level of debugging thanks to some pals' lldb tips.
 - I discovered new valgrind comands and the joys of funchecking your mallocs. (check ur gnl)
-- I even recoded my 2D game on [Scratch](https://scratch.mit.edu/projects/895042965) to use in one of my kids coding workshops. Accidentally becoming crazy bee lady.
+- I even recoded my 2D game on [Scratch](https://scratch.mit.edu/projects/895042965) to use in one of my coding workshops. Accidentally becoming crazy bee lady.
 
 And everything took me 128537 times longer than I thought it would.
 But at least it looks cute.
