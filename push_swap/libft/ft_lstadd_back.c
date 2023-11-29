@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 18:19:51 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/28 10:53:08 by lbarry           ###   ########.fr       */
+/*   Created: 2023/11/15 15:19:19 by lbarry            #+#    #+#             */
+/*   Updated: 2023/11/15 15:19:31 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	pb(t_data *data)
+void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
-	t_stack	*tmp;
+	t_stack	*end;
 
-	if (!data->stack_a)
+	if (!lst)
 		return ;
-	tmp = data->stack_a;
-	data->stack_a = data->stack_a->next;
-	tmp->next = data->stack_b;
-	data->stack_b = tmp;
-	ft_printf("pb\n");
-}
-
-void	pa(t_data *data)
-{
-	t_stack	*tmp;
-
-	if (!data->stack_b)
+	if (!*lst)
+	{
+		*lst = new;
 		return ;
-	tmp = data->stack_b;
-	data->stack_b = data->stack_b->next;
-	tmp->next = data->stack_a;
-	data->stack_a = tmp;
-	ft_printf("pa\n");
+	}
+	end = ft_lstlast(*lst);
+	end->next = new;
 }

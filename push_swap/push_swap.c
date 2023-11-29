@@ -6,181 +6,85 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:05:23 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/24 17:36:53 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/11/29 21:14:49 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
- // loop round real lists?
-void	set_target_in_b(t_data *data)
-{
-	t_stack	*current;
-	t_stack *target_stack;
-	int		next_smallest;
 
-	// ft_printf("setting target in b\n");
-	current = data->stack_a;
-	while (current)
+void	prep_stack_b_for_pa(t_data *data)
+{
+	t_stack *biggest;
+	int		median;
+
+	set_stack_sizes(data);
+	set_indexes(data->stack_b);
+	biggest = find_biggest(data->stack_b);
+	median = data->stack_b_size / 2;
+	while (data->stack_b && data->stack_b != biggest)
 	{
-		next_smallest = INT_MIN;
-		target_stack = data->stack_b;
-		while (target_stack)
-		{
-			if (target_stack->value < current->value && target_stack->value > next_smallest)
-			{
-				next_smallest = target_stack->value;
-				current->target = target_stack;
-			}
-			target_stack = target_stack->next;
-		}
-		if (next_smallest == INT_MIN)
-			current->target = find_biggest(data->stack_b);
-		// ft_printf("target for %d is %d\n", current->value, current->target->value);
-		current = current->next;
+		if (biggest->index <= median)
+			rb(data);
+		else if (biggest->index > median)
+			rrb(data);
 	}
 }
 
-void	set_push_cost(t_stack *stack)
+void	prep_stack_a_for_pb(t_data *data, t_stack *cheapest)
 {
-	t_stack *current;
+	int	median;
 
-	current = stack;
-	while (current)
+	median = data->stack_a_size / 2;
+	while (data->stack_a && data->stack_a != cheapest)
 	{
-		current->push_cost = current->index + current->target->index;
-		// ft_printf("push cost = %d\n", current->push_cost);
-		current = current->next;
+		if (cheapest->index <= median)
+			ra(data);
+		else if (cheapest->index > median)
+			rra(data);
+	}
+}
+void	prep_stack_b_for_pb(t_data *data, t_stack *cheapest)
+{
+	int	median;
+
+	median = data->stack_b_size / 2;
+	while (data->stack_b && data->stack_b != cheapest->target)
+	{
+		if (cheapest->target->index <= median)
+			rb(data);
+		else if (cheapest->target->index > median)
+			rrb(data);
 	}
 }
 
-void	set_cheapest(t_stack *stack)
-{
-	t_stack *cheapest_node;
-	int		cheap_val;
-
-	if (!stack)
-	{
-		ft_printf("stack empty\n");
-		return ;
-	}
-	cheap_val = INT_MAX;
-	while (stack)
-	{
-		if (stack->push_cost < cheap_val)
-		{
-			cheap_val = stack->push_cost;
-			// ft_printf("current cheapest push cost: %d\n", cheap_val);
-			cheapest_node = stack;
-		}
-		stack = stack->next;
-	}
-	cheapest_node->cheapest = true;
-}
-
-t_stack	*get_cheapest(t_stack *stack)
-{
-	t_stack *current;
-
-	if (!stack)
-	{
-		ft_printf("stack empty\n");
-		return (NULL);
-	}
-	current = stack;
-	while (current)
-	{
-		if (current->cheapest)
-		{
-			// ft_printf("cheapest node: %d\n", current->value);
-			return (current);
-		}
-		current = current->next;
-	}
-	return (NULL);
-}
-
-void	prep_stacks_for_pb(t_data *data)
+void	sort_it_out(t_data *data)
 {
 	t_stack *cheapest;
 
-	if (!get_cheapest(data->stack_a))
-	{
-		ft_printf("no cheapest, error prep\n");
-		return ;
-	}
 	cheapest = get_cheapest(data->stack_a);
-	while (data->stack_a && data->stack_a != cheapest)
-	{
-		if (data->stack_a->above_median)
-			rotate_a(data);
-		else if (!data->stack_a->above_median)
-			reverse_rotate_a(data);
-		else
-			return ;
-	}
-	while (data->stack_b && data->stack_b != cheapest->target)
-	{
-		if (data->stack_b->above_median)
-			rotate_b(data);
-		else if (data->stack_b->above_median)
-			reverse_rotate_b(data);
-		else
-			return ;
-	}
+	optimise(data, cheapest);
+	prep_stack_a_for_pb(data, cheapest);
+	prep_stack_b_for_pb(data, cheapest);
+	pb(data);
 }
-
-void	set_indexes_above_median(t_stack *stack, int median)
+void	init_sort(t_data *data)
 {
-	int		i;
-	t_stack	*current;
-
-	if (!stack)
-	{
-		ft_printf("stack empty\n");
-		return ;
-	}
-	current = stack;
-	i = 0;
-	// ft_printf("median = %d\n", median);
-	while(current)
-	{
-		current->index = i;
-		// ft_printf("index %d = %d\n", current->index, current->value);
-		if (i <= median)
-			current->above_median = true;
-		else
-			current->above_median = false;
-		// ft_printf("above median %d\n", current->above_median);
-		current = current->next;
-		i++;
-	}
+	set_stack_sizes(data);
+	set_stack_indexes(data);
+	set_targets_for_b(data);
+	set_push_cost(data);
+	set_cheapest(data->stack_a);
 }
-
 void	push_swap(t_data *data)
 {
-	int	stack_len;
-
-	push_b(data);
-	push_b(data);
-	set_stack_size(data->stack_a, &data->stack_a_size);
-	stack_len = data->stack_a_size;
-	while (stack_len-- > 0)
+	pb(data);
+	pb(data);
+	while (data->stack_a)
 	{
-		// ft_printf("STACK LENNNN: %d\n", stack_len);
-		set_stack_size(data->stack_a, &data->stack_a_size);
-		set_indexes_above_median(data->stack_a, data->stack_a_size / 2);
-		set_stack_size(data->stack_b, &data->stack_b_size);
-		set_indexes_above_median(data->stack_b, data->stack_b_size / 2);
-		set_target_in_b(data);
-		set_push_cost(data->stack_a);
-		set_cheapest(data->stack_a);
-		// print_stack(data->stack_a);
-		// print_stack(data->stack_b);
-		// ft_printf("before prep\n");
-		prep_stacks_for_pb(data);
-		// ft_printf("after prep\n");
-		// opti (cost analysis_a)
-		push_b(data);
+		init_sort(data);
+		sort_it_out(data);
 	}
-	//tiny_sort_a(data);
+	prep_stack_b_for_pa(data);
+	while (data->stack_b)
+		pa(data);
 }

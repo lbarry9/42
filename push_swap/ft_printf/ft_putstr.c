@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 18:19:51 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/28 10:53:08 by lbarry           ###   ########.fr       */
+/*   Created: 2023/06/21 00:09:11 by lbarry            #+#    #+#             */
+/*   Updated: 2023/06/23 13:12:32 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void	pb(t_data *data)
+void	ft_putstr(char *s, int *len)
 {
-	t_stack	*tmp;
+	int	i;
 
-	if (!data->stack_a)
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		(*len) += 6;
 		return ;
-	tmp = data->stack_a;
-	data->stack_a = data->stack_a->next;
-	tmp->next = data->stack_b;
-	data->stack_b = tmp;
-	ft_printf("pb\n");
-}
-
-void	pa(t_data *data)
-{
-	t_stack	*tmp;
-
-	if (!data->stack_b)
-		return ;
-	tmp = data->stack_b;
-	data->stack_b = data->stack_b->next;
-	tmp->next = data->stack_a;
-	data->stack_a = tmp;
-	ft_printf("pa\n");
+	}
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+		(*len)++;
+	}
 }

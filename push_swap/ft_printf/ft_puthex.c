@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 18:19:51 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/28 10:53:08 by lbarry           ###   ########.fr       */
+/*   Created: 2023/06/21 00:06:07 by lbarry            #+#    #+#             */
+/*   Updated: 2023/06/23 13:12:07 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void	pb(t_data *data)
+void	ft_puthex(unsigned long long int nbr, char c, int *len)
 {
-	t_stack	*tmp;
+	char	*base;
 
-	if (!data->stack_a)
+	if (c == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	if (nbr == 0)
+	{
+		ft_putchar('0', len);
 		return ;
-	tmp = data->stack_a;
-	data->stack_a = data->stack_a->next;
-	tmp->next = data->stack_b;
-	data->stack_b = tmp;
-	ft_printf("pb\n");
-}
-
-void	pa(t_data *data)
-{
-	t_stack	*tmp;
-
-	if (!data->stack_b)
-		return ;
-	tmp = data->stack_b;
-	data->stack_b = data->stack_b->next;
-	tmp->next = data->stack_a;
-	data->stack_a = tmp;
-	ft_printf("pa\n");
+	}
+	if (nbr >= 16)
+	{
+		ft_puthex(nbr / 16, c, len);
+		ft_puthex(nbr % 16, c, len);
+	}
+	if (nbr < 16)
+	{
+		write(1, &base[nbr], 1);
+		(*len)++;
+	}
 }

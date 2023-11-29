@@ -6,7 +6,7 @@
 #    By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 14:15:56 by lbarry            #+#    #+#              #
-#    Updated: 2023/11/24 20:51:12 by lbarry           ###   ########.fr        #
+#    Updated: 2023/11/29 20:13:07 by lbarry           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,12 @@ SRCS	= main.c \
 			swap.c \
 			push.c \
 			rotate.c \
+			rev_rotate.c \
 			memory.c \
 			checks.c \
 			push_swap.c \
+			set_up.c \
+			cost.c \
 			utils.c
 
 OBJS	= ${SRCS:.c=.o}

@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 22:42:57 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/24 23:21:27 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/11/29 21:19:43 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 int	manage_args(int *argc, char *arg, t_data *data)
 {
-	if (!count_str(arg, ' '))
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
 	*argc = count_str(arg, ' ') + 1;
 	data->args = ft_split(arg, ' ');
 	if (!data->args)
@@ -35,13 +30,26 @@ int	manage_args(int *argc, char *arg, t_data *data)
 	free_args(data->args);
 	return (1);
 }
-
+int	choose_sort(t_data *data)
+{
+	if (data->stack_a_size == 2)
+	{
+		if (data->stack_a->value > data->stack_a->next->value)
+			sa(data);
+		return (1);
+	}
+	else if (data->stack_a_size == 3)
+		tiny_sort_a(data);
+	else if (data->stack_a_size == 4 || data->stack_a_size == 5)
+	 	small_sort(data);
+	else if (data->stack_a_size > 5)
+		push_swap(data);
+	return (1);
+}
 int	main(int argc, char **argv)
 {
 	static t_data	data = {0};
-	t_stack			*current;
 
-	current = NULL;
 	if (argc > 1 && argv[1][0])
 	{
 		if (argc == 2)
@@ -55,19 +63,11 @@ int	main(int argc, char **argv)
 				return (1);
 			init_stack(&data, &(data.stack_a), argv, 1);
 		}
-		print_stack(data.stack_a);
-		if (argc == 3)
-		{
-			if (data.stack_a->value > data.stack_a->next->value)
-				swap_a(&data);
-		}
-		else if (argc == 4)
-			tiny_sort_a(&data);
-		else if (argc == 5 || argc == 6)
-			small_sort(argc, &data);
-		else if (argc > 6)
-			push_swap(&data);
-		print_stack(data.stack_b);
+		// print_stack(data.stack_a);
+		set_stack_sizes(&data);
+		choose_sort(&data);
+		// print_stack(data.stack_a);
+		// print_stack(data.stack_b);
 		free_stack(data.stack_a);
 		free_stack(data.stack_b);
 	}

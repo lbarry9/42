@@ -6,13 +6,13 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 18:50:52 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/24 22:15:45 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/11/28 10:37:46 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(t_data *data)
+void	sa(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -25,7 +25,7 @@ void	swap_a(t_data *data)
 	ft_printf("sa\n");
 }
 
-void	swap_b(t_data *data)
+void	sb(t_data *data)
 {
 	t_stack	*tmp;
 
