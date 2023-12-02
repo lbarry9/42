@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:12:19 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/29 21:17:35 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/02 21:28:55 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,15 @@ void	optimise(t_data *data, t_stack *cheapest)
 		return ;
 	a_median = data->stack_a_size / 2;
 	b_median = data->stack_b_size / 2;
-	if (cheapest->index <= a_median && cheapest->target->index <= b_median)
+	rr_dif = 0;
+	rrr_dif = 0;
+	if (cheapest->index < a_median && cheapest->target->index < b_median)
 	{
 		rr_dif = rr_rounds(cheapest);
 		while (rr_dif--)
 			rr(data);
 	}
-	else if (cheapest->index > a_median && cheapest->target->index > b_median)
+	else if (cheapest->index >= a_median && cheapest->target->index >= b_median)
 	{
 		rrr_dif = rrr_rounds(data, cheapest);
 		while (rrr_dif--)
@@ -70,28 +72,27 @@ void	set_push_cost(t_data *data)
 	t_stack *current;
 	int	a_median;
 	int	b_median;
+	int	a_cost;
+	int	b_cost;
 
 	current = data->stack_a;
 	a_median = data->stack_a_size / 2;
 	b_median = data->stack_b_size / 2;
+	a_cost = 0;
+	b_cost = 0;
 	while (current)
 	{
-		if (current->index <= a_median && current->target->index <= b_median)
-		{
-			if (current->index < current->target->index)
-				current->push_cost = current->target->index;
-			else
-				current->push_cost = current->index;
-		}
-		else if (current->index > a_median && current->target->index > b_median)
-		{
-			if (current->index < current->target->index)
-				current->push_cost = (data->stack_b_size - current->target->index) - (data->stack_a_size - current->index);
-			else
-				current->push_cost = (data->stack_a_size - current->index) - (data->stack_b_size - current->target->index);
-		}
-		else
-			current->push_cost = current->index + current->target->index;
+		// if biggest - set huge push cost??? (never push biggest)
+		if (current->index < a_median)
+			a_cost = current->index;
+		else if (current->index >= a_median)
+			a_cost = data->stack_a_size - current->index;
+		if (current->target->index < b_median)
+			b_cost = current->target->index;
+		else if (current->target->index >= b_median)
+			b_cost = data->stack_b_size - current->target->index;
+		current->push_cost = a_cost + b_cost;
+		//ft_printf("push cost: %d\n", current->push_cost);
 		current = current->next;
 	}
 }

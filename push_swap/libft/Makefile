@@ -11,7 +11,8 @@ SRCS	=		ft_isdigit.c \
 				ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstadd_back.c \
-				ft_lstlast.c
+				ft_lstlast.c \
+				ft_lstsize.c
 
 OBJS	= $(SRCS:.c=.o)
 NAME	= libft.a

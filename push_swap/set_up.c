@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:04:59 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/29 21:19:04 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/02 21:18:00 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	set_targets_for_b(t_data *data)
 		}
 		if (next_smallest == INT_MIN)
 			current->target = find_biggest(data->stack_b);
+		//ft_printf("current: %d, target: %d\n", current->value, current->target->value);
 		current = current->next;
 	}
 }
@@ -65,7 +66,9 @@ void	set_indexes(t_stack *stack)
 {
 	int		i;
 	t_stack	*current;
+	int		median;
 
+	median = ft_lstsize(stack) / 2;
 	if (!stack)
 	{
 		ft_printf("stack empty\n");
@@ -76,6 +79,7 @@ void	set_indexes(t_stack *stack)
 	while (current)
 	{
 		current->index = i;
+		current->cheapest = false;
 		i++;
 		current = current->next;
 	}

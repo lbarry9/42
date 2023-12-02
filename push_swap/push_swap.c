@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:05:23 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/29 21:14:49 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/02 21:22:50 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	prep_stack_b_for_pa(t_data *data)
 	median = data->stack_b_size / 2;
 	while (data->stack_b && data->stack_b != biggest)
 	{
-		if (biggest->index <= median)
+		if (biggest->index < median)
 			rb(data);
-		else if (biggest->index > median)
+		else if (biggest->index >= median)
 			rrb(data);
 	}
 }
@@ -37,9 +37,9 @@ void	prep_stack_a_for_pb(t_data *data, t_stack *cheapest)
 	median = data->stack_a_size / 2;
 	while (data->stack_a && data->stack_a != cheapest)
 	{
-		if (cheapest->index <= median)
+		if (cheapest->index < median)
 			ra(data);
-		else if (cheapest->index > median)
+		else if (cheapest->index >= median)
 			rra(data);
 	}
 }
@@ -50,9 +50,9 @@ void	prep_stack_b_for_pb(t_data *data, t_stack *cheapest)
 	median = data->stack_b_size / 2;
 	while (data->stack_b && data->stack_b != cheapest->target)
 	{
-		if (cheapest->target->index <= median)
+		if (cheapest->target->index < median)
 			rb(data);
-		else if (cheapest->target->index > median)
+		else if (cheapest->target->index >= median)
 			rrb(data);
 	}
 }
@@ -77,8 +77,18 @@ void	init_sort(t_data *data)
 }
 void	push_swap(t_data *data)
 {
-	pb(data);
-	pb(data);
+	t_stack *biggest;
+	int i;
+
+	i = 2;
+	biggest = find_biggest(data->stack_a);
+	while (i--)
+	{
+		if (data->stack_a != biggest)
+			pb(data);
+		else
+			ra(data);
+	}
 	while (data->stack_a)
 	{
 		init_sort(data);
