@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:05:23 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/02 21:22:50 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/03 20:35:03 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,24 +77,31 @@ void	init_sort(t_data *data)
 }
 void	push_swap(t_data *data)
 {
-	t_stack *biggest;
-	int i;
+	int	i;
+	int	size;
 
 	i = 2;
-	biggest = find_biggest(data->stack_a);
+	data->biggest = find_biggest(data->stack_a);
+	data->next_biggest = find_next_biggest(data);
 	while (i--)
 	{
-		if (data->stack_a != biggest)
-			pb(data);
-		else
+		if (data->stack_a == data->biggest | data->stack_a == data->next_biggest)
 			ra(data);
+		else
+		{
+			pb(data);
+			ra(data);
+		}
 	}
-	while (data->stack_a)
+	size = ft_lstsize(data->stack_a) - 2;
+	while (size--)
 	{
 		init_sort(data);
 		sort_it_out(data);
 	}
 	prep_stack_b_for_pa(data);
+	if (data->stack_a->value > data->stack_a->next->value)
+		sa(data);
 	while (data->stack_b)
 		pa(data);
 }

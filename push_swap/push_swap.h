@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:10:17 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/29 21:12:49 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/03 20:08:45 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,18 @@ typedef struct s_data
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	char	**args;
+	t_stack	*biggest;
+	t_stack *next_biggest;
 	int		stack_a_size;
 	int		stack_b_size;
 }					t_data;
 
 t_stack	*find_biggest(t_stack *stack);
+t_stack *find_next_biggest(t_data *data);
 t_stack	*find_smallest(t_stack *stack);
+int		find_index(t_stack *stack, t_stack *node);
 void	tiny_sort_a(t_data *data);
 void	small_sort(t_data *data);
-int		find_value_index(t_stack *stack, int value);
 void	choose_rotate(t_data *data, t_stack *smallest);
 void	print_stack(t_stack *stack);
 void	set_stack_sizes(t_data *data);

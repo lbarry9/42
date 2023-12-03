@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:12:19 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/02 21:28:55 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/03 21:57:10 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,17 +82,20 @@ void	set_push_cost(t_data *data)
 	b_cost = 0;
 	while (current)
 	{
-		// if biggest - set huge push cost??? (never push biggest)
-		if (current->index < a_median)
-			a_cost = current->index;
-		else if (current->index >= a_median)
-			a_cost = data->stack_a_size - current->index;
-		if (current->target->index < b_median)
-			b_cost = current->target->index;
-		else if (current->target->index >= b_median)
-			b_cost = data->stack_b_size - current->target->index;
-		current->push_cost = a_cost + b_cost;
-		//ft_printf("push cost: %d\n", current->push_cost);
+		if (current == data->biggest | current == data->next_biggest)
+			current->push_cost = INT_MAX;
+		else
+		{
+			if (current->index < a_median)
+				a_cost = current->index;
+			else if (current->index >= a_median)
+				a_cost = data->stack_a_size - current->index;
+			if (current->target->index < b_median)
+				b_cost = current->target->index;
+			else if (current->target->index >= b_median)
+				b_cost = data->stack_b_size - current->target->index;
+			current->push_cost = a_cost + b_cost;
+		}
 		current = current->next;
 	}
 }

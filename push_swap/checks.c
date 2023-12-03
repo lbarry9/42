@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 23:21:40 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/27 15:02:41 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/03 21:55:00 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_max_min(char **args, int argc, int index)
 	{
 		if (ft_strlen(args[index]) > 12)
 			return (0);
-		if (ft_atoi(args[index]) > INT_MAX || ft_atoi(args[index]) < INT_MIN)
+		if (!ft_atoi(args[index]))
 			return (0);
 		index++;
 	}
@@ -78,23 +78,20 @@ int	check_args(char **args, int argc, int index)
 {
 	if (!check_chars(args, index))
 	{
-		ft_printf("Error chars\n");
+		ft_printf("Error\n");
 		return (0);
 	}
 	if (!check_max_min(args, argc, index))
 	{
-		ft_printf("Error max min\n");
+		ft_printf("Error\n");
 		return (0);
 	}
 	if (!check_duplicates(args, index))
 	{
-		ft_printf("Error dups\n");
+		ft_printf("Error\n");
 		return (0);
 	}
 	if (!check_sorted(args, index))
-	{
-		ft_printf("Error sorted\n");
 		return (0);
-	}
 	return (1);
 }

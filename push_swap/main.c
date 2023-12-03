@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 22:42:57 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/02 21:18:05 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/03 21:56:24 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	manage_args(int *argc, char *arg, t_data *data)
 {
-	*argc = count_str(arg, ' ') + 1;
+	*argc = count_str(arg, ' ');
 	data->args = ft_split(arg, ' ');
 	if (!data->args)
 	{
 		ft_printf("Error\n");
 		return (0);
 	}
+	if (*argc == 1)
+		return (0);
 	if (!check_args(data->args, *argc, 0))
 	{
 		free_args(data->args);
@@ -40,8 +42,8 @@ int	choose_sort(t_data *data)
 	}
 	else if (data->stack_a_size == 3)
 		tiny_sort_a(data);
-	else if (data->stack_a_size == 4 || data->stack_a_size == 5)
-	 	small_sort(data);
+	else if (data->stack_a_size > 3 && data->stack_a_size <= 5)
+		small_sort(data);
 	else if (data->stack_a_size > 5)
 		push_swap(data);
 	return (1);
@@ -63,11 +65,8 @@ int	main(int argc, char **argv)
 				return (1);
 			init_stack(&data, &(data.stack_a), argv, 1);
 		}
-		// print_stack(data.stack_a);
 		set_stack_sizes(&data);
 		choose_sort(&data);
-		// print_stack(data.stack_a);
-		// print_stack(data.stack_b);
 		free_stack(data.stack_a);
 		free_stack(data.stack_b);
 	}
