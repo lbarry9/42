@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:05:23 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/03 20:35:03 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 21:51:12 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	prep_stack_b_for_pa(t_data *data)
 {
-	t_stack *biggest;
+	t_stack	*biggest;
 	int		median;
 
 	set_stack_sizes(data);
@@ -43,6 +43,7 @@ void	prep_stack_a_for_pb(t_data *data, t_stack *cheapest)
 			rra(data);
 	}
 }
+
 void	prep_stack_b_for_pb(t_data *data, t_stack *cheapest)
 {
 	int	median;
@@ -59,7 +60,7 @@ void	prep_stack_b_for_pb(t_data *data, t_stack *cheapest)
 
 void	sort_it_out(t_data *data)
 {
-	t_stack *cheapest;
+	t_stack	*cheapest;
 
 	cheapest = get_cheapest(data->stack_a);
 	optimise(data, cheapest);
@@ -67,32 +68,12 @@ void	sort_it_out(t_data *data)
 	prep_stack_b_for_pb(data, cheapest);
 	pb(data);
 }
-void	init_sort(t_data *data)
-{
-	set_stack_sizes(data);
-	set_stack_indexes(data);
-	set_targets_for_b(data);
-	set_push_cost(data);
-	set_cheapest(data->stack_a);
-}
+
 void	push_swap(t_data *data)
 {
-	int	i;
 	int	size;
 
-	i = 2;
-	data->biggest = find_biggest(data->stack_a);
-	data->next_biggest = find_next_biggest(data);
-	while (i--)
-	{
-		if (data->stack_a == data->biggest | data->stack_a == data->next_biggest)
-			ra(data);
-		else
-		{
-			pb(data);
-			ra(data);
-		}
-	}
+	push_prep(data);
 	size = ft_lstsize(data->stack_a) - 2;
 	while (size--)
 	{

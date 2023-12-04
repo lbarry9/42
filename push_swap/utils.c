@@ -6,16 +6,16 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:43:55 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/03 20:06:50 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 15:26:21 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *find_next_biggest(t_data *data)
+t_stack	*find_next_biggest(t_data *data)
 {
-	t_stack *current;
-	t_stack *next_biggest;
+	t_stack	*current;
+	t_stack	*next_biggest;
 	int		big_val;
 
 	current = data->stack_a;
@@ -31,6 +31,7 @@ t_stack *find_next_biggest(t_data *data)
 	}
 	return (next_biggest);
 }
+
 int	find_index(t_stack *stack, t_stack *node)
 {
 	t_stack	*current;
@@ -57,7 +58,7 @@ void	print_stack(t_stack *stack)
 	current = stack;
 	while (current)
 	{
-		printf("%d\n", current->value);
+		ft_printf("%d\n", current->value);
 		current = current->next;
 	}
 }
@@ -80,4 +81,6 @@ void	set_stack_sizes(t_data *data)
 		data->stack_b_size++;
 		current = current->next;
 	}
+	data->a_median = data->stack_a_size / 2;
+	data->b_median = data->stack_b_size / 2;
 }

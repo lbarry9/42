@@ -6,12 +6,11 @@
 #    By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 14:15:56 by lbarry            #+#    #+#              #
-#    Updated: 2023/11/29 20:13:07 by lbarry           ###   ########.fr        #
+#    Updated: 2023/12/04 15:08:44 by lbarry           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	= main.c \
-			tiny.c \
 			small.c \
 			swap.c \
 			push.c \

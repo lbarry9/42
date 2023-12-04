@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:24:21 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/02 20:52:53 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 22:19:13 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ typedef struct s_stack
 	int				value;
 	int				index;
 	struct s_stack	*target;
-	int			push_cost;
-	bool		cheapest;
+	int				push_cost;
+	bool			cheapest;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -35,7 +35,7 @@ size_t	ft_strlen(const char *str);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_atoi(const char *nptr);
+long	ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nelem, size_t elsize);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);

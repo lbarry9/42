@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:18:43 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/29 21:11:29 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 15:04:42 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	rotate_a(t_data *data)
 	tmp->next = old_first;
 	old_first->next = NULL;
 }
+
 void	rb(t_data *data)
 {
 	if (!data->stack_b || !data->stack_b->next)
@@ -59,5 +60,3 @@ void	rr(t_data *data)
 	rotate_b(data);
 	ft_printf("rr\n");
 }
-
-

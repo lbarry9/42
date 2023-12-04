@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:12:19 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/03 21:57:10 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 15:26:52 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,11 @@ void	optimise(t_data *data, t_stack *cheapest)
 
 void	set_push_cost(t_data *data)
 {
-	t_stack *current;
-	int	a_median;
-	int	b_median;
-	int	a_cost;
-	int	b_cost;
+	t_stack	*current;
+	int		a_cost;
+	int		b_cost;
 
 	current = data->stack_a;
-	a_median = data->stack_a_size / 2;
-	b_median = data->stack_b_size / 2;
 	a_cost = 0;
 	b_cost = 0;
 	while (current)
@@ -86,13 +82,13 @@ void	set_push_cost(t_data *data)
 			current->push_cost = INT_MAX;
 		else
 		{
-			if (current->index < a_median)
+			if (current->index < data->a_median)
 				a_cost = current->index;
-			else if (current->index >= a_median)
+			else if (current->index >= data->a_median)
 				a_cost = data->stack_a_size - current->index;
-			if (current->target->index < b_median)
+			if (current->target->index < data->b_median)
 				b_cost = current->target->index;
-			else if (current->target->index >= b_median)
+			else if (current->target->index >= data->b_median)
 				b_cost = data->stack_b_size - current->target->index;
 			current->push_cost = a_cost + b_cost;
 		}
@@ -102,13 +98,10 @@ void	set_push_cost(t_data *data)
 
 t_stack	*get_cheapest(t_stack *stack)
 {
-	t_stack *current;
+	t_stack	*current;
 
 	if (!stack)
-	{
-		ft_printf("stack empty\n");
 		return (NULL);
-	}
 	current = stack;
 	while (current)
 	{

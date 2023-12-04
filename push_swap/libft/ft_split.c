@@ -6,7 +6,7 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 12:50:28 by lbarry            #+#    #+#             */
-/*   Updated: 2023/11/26 16:18:18 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 15:38:25 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ static char	**make_arr(char const *s, char **arr, char c)
 			while (s[j] && s[j] != c)
 				j++;
 			arr[index] = ft_substr(s, i, j - i);
-			//printf("arr[%zu] = %s\n", index, arr[index]);
 			if (!arr[index])
 				clear_arr(arr, index);
 			i = j;

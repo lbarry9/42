@@ -6,19 +6,19 @@
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 23:21:40 by lbarry            #+#    #+#             */
-/*   Updated: 2023/12/03 21:55:00 by lbarry           ###   ########.fr       */
+/*   Updated: 2023/12/04 23:01:26 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_max_min(char **args, int argc, int index)
+int	check_max_min(char **args, int index)
 {
-	while (index < argc)
+	while (args[index])
 	{
 		if (ft_strlen(args[index]) > 12)
 			return (0);
-		if (!ft_atoi(args[index]))
+		if (ft_atoi(args[index]) > INT_MAX || ft_atoi(args[index]) < INT_MIN)
 			return (0);
 		index++;
 	}
@@ -33,7 +33,11 @@ int	check_chars(char **args, int index)
 	{
 		j = 0;
 		if (args[index][j] == '-' || args[index][j] == '+')
+		{
 			j++;
+			if (!ft_isdigit(args[index][j]))
+				return (0);
+		}
 		while (args[index][j])
 		{
 			if (!ft_isdigit(args[index][j]))
@@ -74,14 +78,14 @@ int	check_sorted(char **args, int index)
 	return (0);
 }
 
-int	check_args(char **args, int argc, int index)
+int	check_args(char **args, int index)
 {
 	if (!check_chars(args, index))
 	{
 		ft_printf("Error\n");
 		return (0);
 	}
-	if (!check_max_min(args, argc, index))
+	if (!check_max_min(args, index))
 	{
 		ft_printf("Error\n");
 		return (0);
