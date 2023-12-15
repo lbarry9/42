@@ -17,7 +17,11 @@ Enjoyed using the visualizer... really took me until the end of my project when 
 ![Screenshot from 2023-12-15 13-42-55](https://github.com/lbarry9/42/assets/127246677/964b92b6-de10-42e6-8e91-46e255fb4476)
 
 get_last_project(circle);
+
+
 pls_help_me_pass(exam_02);
+
+
 circle = circle->next;
 
 Reading:
