@@ -8,6 +8,7 @@ So far, I've said so long to:
 - get next line
 - (I'm definitely not)born to be root
 - so long (and thank you for the fish)
+- push_swap
 - a large portion of my sanity
 
 Side Projects:
