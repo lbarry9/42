@@ -18,11 +18,10 @@ Enjoyed using the visualizer... really took me until the end of my project when 
 
 get_last_project(circle);
 
-
 pls_help_me_pass(exam_02);
-
 
 circle = circle->next;
 
 Reading:
+
 The Goldfinch by Donna Tartt
