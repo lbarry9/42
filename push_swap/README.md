@@ -16,5 +16,5 @@ get_last_project(circle);
 pls_help_me_pass(exam_02);
 circle = circle->next;
 ```
-### Reading:
+Reading: 
 The Goldfinch by Donna Tartt
