@@ -14,9 +14,9 @@ So far, I've said so long to:
 Side Projects:
 - weekly French literacy classes for a charity in Paris 13eme
 - English tutoring
-- started teaching coding workshops for kids with Magic Makers from 09/2023
-- enrolled for a year of Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
-- helping subtitle my friend's adventure documentary film (FR -> EN)
+- teaching coding workshops for kids with Magic Makers from 09/2023
+- taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
+- helping subtitle my friend's adventure documentary (FR -> EN)
 
 Book Club:
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
