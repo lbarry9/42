@@ -8,5 +8,5 @@ Later on, the frequently encountered questions at the end of [this article](http
 
 Still stuck on the bloody exam_02, send help/
 
-(still sort of) Reading:
+(still) Reading:
 _The Goldfinch_ by Donna Tartt
