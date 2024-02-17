@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/15 11:39:45 by lbarry            #+#    #+#             */
+/*   Updated: 2024/02/04 03:11:28 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	if (argc != 5)
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (str1[i] != '\0' || str2[i] != '\0')
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
-	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
 	return (0);
 }

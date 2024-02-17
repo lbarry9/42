@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/05 13:08:08 by lbarry            #+#    #+#             */
+/*   Updated: 2023/06/12 23:13:47 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+int	ft_atoi(const char *nptr)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	int	i;
+	int	res;
+	int	sign;
 
 	i = 0;
-	if (argc != 5)
+	res = 0;
+	sign = 1;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
-	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		res = res * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (res * sign);
 }

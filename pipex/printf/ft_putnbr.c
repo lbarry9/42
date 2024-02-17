@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/06/23 13:05:36 by lbarry            #+#    #+#             */
+/*   Updated: 2024/01/31 21:11:14 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv, char **envp)
+void	ft_putnbr(int n, int *len)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	char			c;
+	long long int	nbr;
 
-	i = 0;
-	if (argc != 5)
+	nbr = n;
+	if (nbr < 0)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
+		write(2, "-", 1);
+		nbr = -nbr;
+		(*len)++;
 	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
+	if (nbr > 9)
 	{
-		ft_pipex(i, argv, envp, &pipex);
-		i++;
+		ft_putnbr(nbr / 10, len);
+		ft_putnbr(nbr % 10, len);
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
+	if (nbr < 10)
+	{
+		c = nbr + '0';
+		write(2, &c, 1);
+		(*len)++;
+	}
 }

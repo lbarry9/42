@@ -9,6 +9,8 @@ So far, I've said so long to:
 - (I'm definitely not)born to be root
 - so long (and thank you for the fish)
 - push swap
+- pipex
+- les samedis soir
 - a large portion of my sanity
 
 Side Projects:

@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/12 11:50:20 by lbarry            #+#    #+#             */
+/*   Updated: 2023/05/15 18:52:06 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+char	*ft_strrchr(const char *s, int c)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	int		i;
+	char	*str;
 
-	i = 0;
-	if (argc != 5)
+	i = ft_strlen(s);
+	str = (char *)s;
+	if ((char)c == 0)
+		return (&str[i]);
+	while (i--)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
+		if (str[i] == (char)c)
+			return (&str[i]);
 	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
-		i++;
-	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
 	return (0);
 }

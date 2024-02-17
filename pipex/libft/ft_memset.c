@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/10 17:13:31 by lbarry            #+#    #+#             */
+/*   Updated: 2023/05/24 18:15:43 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	unsigned char	*dst;
+	size_t			i;
 
+	dst = s;
 	i = 0;
-	if (argc != 5)
+	while (i < n)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
-	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
+		dst[i] = c;
 		i++;
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
+	return (s);
 }

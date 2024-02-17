@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/16 11:55:22 by lbarry            #+#    #+#             */
+/*   Updated: 2023/05/24 18:14:30 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	char	*ptr;
 
-	i = 0;
-	if (argc != 5)
+	if (nelem == 0 || elsize == 0)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
+		nelem = 1;
+		elsize = 1;
 	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
-		i++;
-	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
+	if (nelem != 0 && nelem * elsize / elsize != nelem)
+		return (0);
+	ptr = malloc(nelem * elsize);
+	if (!ptr)
+		return (0);
+	ft_bzero(ptr, (nelem * elsize));
+	return ((void *)ptr);
 }

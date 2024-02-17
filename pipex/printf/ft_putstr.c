@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/06/21 00:09:11 by lbarry            #+#    #+#             */
+/*   Updated: 2024/01/31 21:11:34 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv, char **envp)
+void	ft_putstr(char *s, int *len)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	int	i;
 
 	i = 0;
-	if (argc != 5)
+	if (!s)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
+		write(2, "(null)", 6);
+		(*len) += 6;
+		return ;
 	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
+	while (s[i])
 	{
-		ft_pipex(i, argv, envp, &pipex);
+		write(2, &s[i], 1);
 		i++;
+		(*len)++;
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
 }

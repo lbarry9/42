@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbarry <lbarry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 22:00:09 by lbarry            #+#    #+#             */
-/*   Updated: 2024/02/07 00:47:27 by lbarry           ###   ########.fr       */
+/*   Created: 2023/05/15 15:04:36 by lbarry            #+#    #+#             */
+/*   Updated: 2023/05/24 18:17:34 by lbarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-int	main(int argc, char **argv, char **envp)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	static t_pipex	pipex = {0};
-	int				i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	if (argc != 5)
+	j = 0;
+	if (little[j] == '\0')
+		return ((char *)big);
+	if (len == 0)
+		return (NULL);
+	while (big[i] != '\0' && i < len)
 	{
-		ft_printf("Error: incorrect number of arguments\n");
-		return (1);
-	}
-	init_pipex(&pipex, argc, argv);
-	while (i < pipex.nb_cmds)
-	{
-		ft_pipex(i, argv, envp, &pipex);
+		if (big[i] == little[0])
+		{
+			j = 0;
+			while (little[j] != '\0' && big[i + j] == little[j]
+				&& (i + j) < len)
+				j++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
+		}
 		i++;
 	}
-	i = 0;
-	while (i < pipex.nb_cmds)
-		waitpid(pipex.pid[i++], NULL, 0);
-	close(pipex.fd[0]);
-	return (0);
+	return (NULL);
 }
