@@ -6,7 +6,7 @@ Would recommend starting with the short, helpful videos from the playlist [_Unix
 
 Later on, the frequently encountered questions at the end of [this article](https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901) are very useful for debugging.
 
-Still stuck on the bloody exam_02, send help/
+Still stuck on the bloody exam_02, send help!
 
 (still) Reading:
 _The Goldfinch_ by Donna Tartt
