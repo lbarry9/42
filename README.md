@@ -3,14 +3,14 @@
 After surviving the _piscine_, now the real challenge begins. Let's see how long it takes a novice to get through the infamous _common core_...
 
 So far, I've said so long to:
-- my libft library
-- ft_printf
-- get next line
-- (I'm definitely not)born to be root
-- so long (and thank you for the fish)
-- push swap
-- pipex
-- les samedis soir
+- my libft library (june 2023)
+- ft_printf (june 2023)
+- get next line (july 2023)
+- (I'm definitely not)born to be root (july 2023)
+- so long (and thank you for the fish) (oct 2023)
+- push swap (dec 2023)
+- pipex (feb 2024)
+- mes samedis soir
 - a large portion of my sanity
 
 Side Projects:
