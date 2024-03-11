@@ -2,7 +2,7 @@
 
 If you're unfamiliar with the Dining Philosophers problem have a look [here.](https://www.geeksforgeeks.org/dining-philosophers-problem/)
 
-This [project](https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2) is a nice follow on from pipex. Now instead of creating multiple simultaneous processes using forks, we have to run multiple threads within one single process. I like to think about forked processes as lots of identical rooms with one person doing an activity in each room, whereas threads are like lots of people all doing the same activity in the same room. If you move the furniture around in a forked room, your neighbour's furniture won't move. But as a thread, if you change the furniture in the room, everyone's furniture changes.
+This [project](https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2) is a nice follow-on from pipex. Now instead of creating multiple simultaneous processes using forks, we have to run multiple threads within one single process. I like to think about forked processes as lots of identical rooms with one person doing an activity in each room, whereas threads are like lots of people all doing the same activity in the same room. If you move the furniture around in a forked room, your neighbour's furniture won't move. But as a thread, if you change the furniture in the room, everyone's furniture changes.
 
 Anyway, learning about threads and mutexes was pretty cool. CodeVault saved me again with his [videos.](https://www.youtube.com/watch?v=IKG1P4rgm54)
 
