@@ -10,6 +10,7 @@ So far, I've said so long to:
 - so long (and thank you for the fish) (oct 2023)
 - push swap (dec 2023)
 - pipex (feb 2024)
+- philosophers (feb 2024)
 - mes samedis soir
 - a large portion of my sanity
 

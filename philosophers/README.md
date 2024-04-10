@@ -15,6 +15,8 @@ Creating a basic project which works was relatively quick but it's easy to get s
 - Here's a [visualiser](https://nafuka11.github.io/philosophers-visualizer/) and [tester](https://github.com/Rz-Rz/thales_tester) to help finish the project.
 - I didn't have time for the bonuses, but this [repo's](https://github.com/lavrenovamaria/42-philosophers) cat memes seem to be an unrivaled way to get to grips with the differences between mutexes and semaphors.
 
+![137924710-f11fbc8f-c92a-410e-bc53-db926ddeec7a](https://github.com/lbarry9/42/assets/127246677/589bcc1b-c0c6-42a6-9baa-eec1a62a99a5)
+
 Feels good to FINALLY be over exam_02 and in a new circle! Time for mini_hell...
 
 (still) Reading:

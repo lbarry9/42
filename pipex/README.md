@@ -6,7 +6,7 @@ Would recommend starting with the short, helpful videos from the playlist [_Unix
 
 Later on, the frequently encountered questions at the end of [this article](https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901) are very useful for debugging.
 
-![pipex meme](/mnt/nfs/homes/lbarry/Downloads/pipex meme.webp)
+![pipex meme](https://github.com/lbarry9/42/assets/127246677/85ac369e-213c-40be-94b1-33b45e8a7667)
 
 Still stuck on the bloody exam_02, send help!
 
