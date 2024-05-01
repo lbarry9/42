@@ -11,7 +11,8 @@ So far, I've said so long to:
 - push swap (dec 2023)
 - pipex (feb 2024)
 - philosophers (feb 2024)
-- mes samedis soir
+- minishell (april 2024)
+- netpractice (april 2024)
 - a large portion of my sanity
 
 Side Projects:
@@ -19,7 +20,7 @@ Side Projects:
 - English tutoring
 - teaching coding workshops for kids with Magic Makers from 09/2023
 - taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
-- helping subtitle my friend's adventure documentary (FR -> EN)
+- helping subtitle my friend's adventure documentary (FR -> EN) in autumn
 
 Book Club:
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
@@ -27,3 +28,4 @@ Book Club:
 - _Love From The Pink Palace_ by Jill Nalder
 - _Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin
 - _The Goldfinch_ by Donna Tarrt
+- _Grand Union_ collection of short stories by Zadie Smith
