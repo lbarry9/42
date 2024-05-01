@@ -1,6 +1,8 @@
 # 42
 ## A collection of my projects from the école 42 curriculum. Rentrée 05/2023.
-After surviving the _piscine_, now the real challenge begins. Let's see how long it takes a novice to get through the infamous _common core_...
+After surviving the _piscine_, now the real challenge begins...
+
+![thisisfine](https://github.com/lbarry9/42/assets/127246677/7b3e0fb1-891f-4f9a-bc8e-207772cc35ab)
 
 So far, I've said so long to:
 - my libft library (june 2023)
@@ -16,11 +18,11 @@ So far, I've said so long to:
 - a large portion of my sanity
 
 Side Projects:
-- weekly French literacy classes for a charity in Paris 13eme
-- English tutoring
+- French literacy classes for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
+- periodic English tutoring classes with one of my old students
 - teaching coding workshops for kids with Magic Makers from 09/2023
 - taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
-- helping subtitle my friend's adventure documentary (FR -> EN) in autumn
+- helping subtitle my friend's adventure documentary (FR -> EN) in autumn 2024
 
 Book Club:
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
