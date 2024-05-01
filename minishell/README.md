@@ -7,6 +7,8 @@ A lot of research to do before starting to get to grips with how bash really wor
 Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/). 
 The best thing is to test everything you do against bash --posix, you can use the terminator to help.
 
+![quote-unix-is-basically-a-simple-operating-system-but-you-have-to-be-a-genius-to-understand-dennis-ritchie-24-60-27](https://github.com/lbarry9/42/assets/127246677/f1681bb4-852b-4371-bc0a-150602ab36f1)
+
 Otherwise the project felt like a long and painful culmination of everything I've learned at 42 so far- except when you piece together lots of small projects you thought you understood, suddenly nothing works at all :upside_down_face:
 And as is often the case, we had the blackhole on our backs too- 42 forcing us to step up or get out...
 
