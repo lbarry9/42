@@ -15,7 +15,7 @@ And as is often the case, we had the blackhole on our backs too- 42 forcing us t
 **Tips:**
 - FIND A GR8 M8.
 - Being at 42 with your mate as much as possible is a huge time saver, find someone with the same level of motivation and presence at 42- the rest you can learn!
-- Get organised- we had a google drive with our plans, tests and resources ++ a shared git with 4 branches (a good moment to get good at git too- Git Kraken saved us multiple times- merge, fastforward and rebase are not to be mixed up).
+- Get organised- we had a google drive with our plans, tests and resources ++ a shared git with 4 branches (a good moment to get good at git too- Git Kraken saved us multiple times- turns out merge, fastforward and rebase are not to be mixed up).
 - Lots of people divide the project into parsing and exec with one person doing each part- we found this to reductive and boring as we'd never understand the project as a whole and could waste time trying to merge two people's different styles of code and wouldn't be able to easily debug / fix leaks stemming from the other person's code. Bref, I'm very happy we didn't divide it up like this it saved a lot of time at the end and I'm pleased I understand the whole project AND the microshell exam afterwards felt like a gift.
 - Try not to burnout and take a GOOD OLD WELL DESERVED REST afterwards, you've earnt it.
 
