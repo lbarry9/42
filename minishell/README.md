@@ -2,11 +2,10 @@
 
 Minishell's reputation precedes it and I completely get why- this project was a huge test of my coding ability- especially for fixing leaks and debugging- but also my patience, motivation and ability to work as a team. Fortunately I got a pretty great mate and we managed to add some fun and pizzazz to this pretty dry and depressing project.
 
-A lot of research to do before starting to get to grips with how bash really works and the order in which to structure this project. 
+A lot of research to do before starting to get to grips with how bash really works and the order in which to structure this project.
 [This manual](https://www.geeksforgeeks.org/dining-philosophers-problem/) is an essential as it details bash's command language syntax in order.
-
-This [project](https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2) is a nice follow-on from pipex. Now instead of creating multiple simultaneous processes using forks, we have to run multiple threads within one single process. I like to think about forked processes as lots of identical rooms with one person doing an activity in each room, whereas threads are like lots of people all doing the same activity in the same room. If you move the furniture around in a forked room, your neighbour's furniture won't move. But as a thread, if you change the furniture in the room, everyone's furniture changes.
-Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/).
+Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/). 
+The best thing is to test everything you do against bash --posix, you can use the terminator to help.
 
 Otherwise the project felt like a long and painful culmination of everything I've learned at 42 so far- except when you piece together lots of small projects you thought you understood, suddenly nothing works at all :upside_down_face:
 And as is often the case, we had the blackhole on our backs too- 42 forcing us to step up or get out...
