@@ -1,6 +1,6 @@
 # Creating my very own UNIX shell with my mate [KhaSmiley](https://github.com/KhaSmiley).
 
-Minishell's reputation precedes it and I completely get why- this project was a huge test of my coding ability- especially for fixing leaks and debugging- but also my patience, motivation and ability to work as a team. Fortunately I have a pretty great mate and we managed to add some fun and pizzazz to this pretty dry and depressing project.
+Minishell's reputation precedes it and I completely get why- this project was a huge test of my coding ability- especially for fixing leaks and debugging- but also my patience, motivation and ability to work as a team. Fortunately I have a pretty great mate and we managed to add some fun and pizzazz to this long and pretty dry project.
 
 A lot of research to do before starting to get to grips with how bash really works and the order in which to structure this project.
 [This manual](https://www.geeksforgeeks.org/dining-philosophers-problem/) is an essential as it details bash's command language syntax in order.
