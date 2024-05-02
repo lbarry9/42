@@ -20,7 +20,7 @@ So far, I've said so long to:
 Side Projects:
 - French literacy classes for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
 - periodic English tutoring classes with one of my old students
-- teaching coding workshops for kids with Magic Makers from 09/2023
+- teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023
 - taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
 - helping subtitle my friend's adventure documentary (FR -> EN) in autumn 2024
 
