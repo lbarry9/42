@@ -4,7 +4,7 @@ After surviving the _piscine_, now the real challenge begins...
 
 ![thisisfine](https://github.com/lbarry9/42/assets/127246677/7b3e0fb1-891f-4f9a-bc8e-207772cc35ab)
 
-So far, I've said so long to:
+**So far, I've said so long to:**
 - my libft library (june 2023)
 - ft_printf (june 2023)
 - get next line (july 2023)
@@ -18,14 +18,14 @@ So far, I've said so long to:
 - friday nights
 - a large portion of my sanity
 
-Side Projects:
+**Side Projects:**
 - French literacy classes for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
 - periodic English tutoring classes with one of my old students
 - teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023
 - taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
 - helping subtitle my friend's adventure documentary (FR -> EN) in autumn 2024
 
-Book Club:
+**Book Club:**
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
 - _On Earth We Are Briefly Gorgeous_ by Ocean Vuong
 - _Love From The Pink Palace_ by Jill Nalder

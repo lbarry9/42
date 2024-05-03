@@ -15,7 +15,6 @@ But at least it looks cute.
 
 Thanks to [itch.io](https://itch.io/game-assets/free/tag-sprites) for the free sprites. Thanks to this [article](https://reactive.so/post/42-a-comprehensive-guide-to-so_long) for insight and guidance. Thanks to amben-ha for keeping me sane.
 
-Reading:
-_Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin   
->"What is a programmer?" Emily asked.   
->"A programmer is a deviner of possible outcomes, and a seer of unseen worlds." 
+**Reading:** _Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin
+>"What is a programmer?" Emily asked.
+>"A programmer is a deviner of possible outcomes, and a seer of unseen worlds."

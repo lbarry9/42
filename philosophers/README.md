@@ -19,5 +19,4 @@ Creating a basic project which works was relatively quick but it's easy to get s
 
 Feels good to FINALLY be over exam_02 and in a new circle! Time for mini_hell...
 
-(still) Reading:
-_The Goldfinch_ by Donna Tartt
+**Reading:** _The Goldfinch_ by Donna Tartt

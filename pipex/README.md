@@ -10,5 +10,4 @@ Later on, the frequently encountered questions at the end of [this article](http
 
 Otherwise, still stuck on the bloody exam_02!!! argh
 
-Reading:
-_The Goldfinch_ by Donna Tartt
+**Reading:** _The Goldfinch_ by Donna Tartt

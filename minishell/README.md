@@ -4,7 +4,7 @@ Minishell's reputation precedes it and I completely get why- this project was a 
 
 A lot of research to do before starting to get to grips with how bash really works and the order in which to structure this project.
 [This manual](https://www.geeksforgeeks.org/dining-philosophers-problem/) is an essential as it details bash's command language syntax in order.
-Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/). 
+Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/).
 The best thing is to test everything you do against bash --posix, you can use the terminator to help.
 
 ![quote-unix-is-basically-a-simple-operating-system-but-you-have-to-be-a-genius-to-understand-dennis-ritchie-24-60-27](https://github.com/lbarry9/42/assets/127246677/f1681bb4-852b-4371-bc0a-150602ab36f1)
@@ -19,8 +19,8 @@ And as is often the case, we had the blackhole on our backs too- 42 forcing us t
 - Lots of people divide the project into parsing and exec with one person doing each part- we found this to reductive and boring as we'd never understand the project as a whole and could waste time trying to merge two people's different styles of code and wouldn't be able to easily debug / fix leaks stemming from the other person's code. Bref, I'm very happy we didn't divide it up like this it saved a lot of time at the end and I'm pleased I understand the whole project AND the microshell exam afterwards was a piece of cake.
 - Try not to burnout and take a GOOD OLD WELL DESERVED REST afterwards, you've earnt it.
 
-Minihell is over- we moving up in the world :nerd_face: 
+Minihell is over- we moving up in the world :nerd_face:
 
-Reading: _The Goldfinch_ by Donna Tartt
+**Reading:** _The Goldfinch_ by Donna Tartt
 
 And unlocking new levels of code dreaming (we're dreaming in 3D code now folks, my functions are rooms, send help)
