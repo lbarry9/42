@@ -6,5 +6,5 @@ Creating my libft (and getting all my functions to pass three different testers)
 I enjoyed recoding printf and understanding how to use variadic arguments. And get_next_line was a bit tricky, especially since I decided to use linked lists for the first time. Another good learning curb!
 
 **Reading:**
-_On Earth We Are Briefly_ Gorgeous by Ocean Vuong
-_Love From The Pink Palace_ by Jill Nalder
+- _On Earth We Are Briefly_ Gorgeous by Ocean Vuong
+- _Love From The Pink Palace_ by Jill Nalder
