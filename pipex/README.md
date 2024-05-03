@@ -8,7 +8,7 @@ Later on, the frequently encountered questions at the end of [this article](http
 
 ![pipex meme](https://github.com/lbarry9/42/assets/127246677/85ac369e-213c-40be-94b1-33b45e8a7667)
 
-Still stuck on the bloody exam_02, send help!
+Otherwise, still stuck on the bloody exam_02!!! argh
 
-(still) Reading:
+Reading:
 _The Goldfinch_ by Donna Tartt
