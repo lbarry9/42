@@ -15,6 +15,7 @@ So far, I've said so long to:
 - philosophers (feb 2024)
 - minishell (april 2024)
 - netpractice (april 2024)
+- friday nights
 - a large portion of my sanity
 
 Side Projects:
