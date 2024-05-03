@@ -21,6 +21,6 @@ And as is often the case, we had the blackhole on our backs too- 42 forcing us t
 
 Minihell is over- we moving up in the world :nerd_face: 
 
-(still) Reading: _The Goldfinch_ by Donna Tartt
+Reading: _The Goldfinch_ by Donna Tartt
 
 And unlocking new levels of code dreaming (we're dreaming in 3D code now folks, my functions are rooms, send help)
