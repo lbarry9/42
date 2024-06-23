@@ -18,7 +18,7 @@ Cub3d wasn't the easiest project to get my head around- even as someone who does
 - 3D raycasting with wall textures (images in xpm format)- replacing put pixel with a screen buffer (essentially a pointer to the memory address for every pixel of your computer screen, using which you can directly update each pixel's colour using all your previous calculations and texture info)
 - we added a function which allows you to rotate the player's FOV using the mouse cursor instead of the keyboard arrows
 
-***In the end I dipped in and out of lots of different resources and restarted my raycasting three times...***
+**In the end I dipped in and out of lots of different resources and restarted my raycasting three times...**
 - I used [this site](https://demoman.net/?a=trig-for-games) to help understand the maths behing raycasting.
 - [This video](https://www.youtube.com/watch?v=U0_ONQQ5ZNM) helped me visualise how the maths transforms into 3D images.
 - [This video](https://www.youtube.com/watch?v=NbSee-XM7WA) is a nice intro into the DDA algorithm (not as complicated as its name makes it seem- it's basically just a way of saving computer resources by not checking for wall collisions at every pixel or every square of your map, but only at relevant square intersections).
