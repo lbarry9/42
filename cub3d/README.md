@@ -1,6 +1,6 @@
 # Creating a 3D game using Wolfenstein-esque raycasting with my mate [KhaSmiley](https://github.com/KhaSmiley).
 
-We made a thing which you can play!!
+**We made a thing which you can play!!**
 
 [cub3d_video.webm](https://github.com/lbarry9/42/assets/127246677/f6491efa-9dad-41ff-8c2e-de6b39e8b856)
 
