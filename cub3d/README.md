@@ -1,26 +1,28 @@
 # Creating a 3D game using Wolfenstein-esque raycasting with my mate [KhaSmiley](https://github.com/KhaSmiley).
 
-Minishell's reputation precedes it and I completely get why- this project was a huge test of my coding ability- especially for fixing leaks and debugging- but also my patience, motivation and ability to work as a team. Fortunately I have a pretty great mate and we managed to add some fun and pizzazz to this long and pretty dry project.
+We made a thing which you can play!!
 
-A lot of research to do before starting to get to grips with how bash really works and the order in which to structure this project.
-[This manual](https://www.geeksforgeeks.org/dining-philosophers-problem/) is an essential as it details bash's command language syntax in order.
-Here are some useful tools to play with: [bash parser](https://vorpaljs.github.io/bash-parser-playground/); [command interpreter](https://explainshell.com/).
-The best thing is to test everything you do against bash --posix, you can use the terminator to help.
+[cub3d_video.webm](https://github.com/lbarry9/42/assets/127246677/f6491efa-9dad-41ff-8c2e-de6b39e8b856)
 
-![quote-unix-is-basically-a-simple-operating-system-but-you-have-to-be-a-genius-to-understand-dennis-ritchie-24-60-27](https://github.com/lbarry9/42/assets/127246677/f1681bb4-852b-4371-bc0a-150602ab36f1)
+![cub3d](https://github.com/lbarry9/42/assets/127246677/f1bb63fe-e391-4c96-89cf-1187c7d78d45)
 
-Otherwise the project felt like a long and painful culmination of everything I've learned at 42 so far- except when you piece together lots of small projects you thought you understood, suddenly nothing works at all :upside_down_face:
-And as is often the case, we had the blackhole on our backs too- 42 forcing us to step up or get out...
+Cub3d wasn't the easiest project to get my head around- even as someone who doesn't mind maths. I can't code if I don't fully understand what I'm doing and I split every project into babysteps- this was almost impossible on this project where everyone seems to code using one old tutorial and you have to code a bunch of functions in one go for the maths to work. I couldn't find resources which didn't skip over important steps in my understanding and, once I did, transforming the mathematical concepts into code (still in C) which was comprehensible AND debuggable was really difficult.
 
-**Tips:**
-- FIND A GR8 M8.
-- Being at 42 with your mate as much as possible is a huge time saver, find someone with the same level of motivation and presence at 42- the rest you can learn!
-- Get organised- we had a google drive with our plans, tests and resources ++ a shared git with 4 branches (a good moment to get good at git too- Git Kraken saved us multiple times- turns out merge, fastforward and rebase are not to be mixed up).
-- Lots of people divide the project into parsing and exec with one person doing each part- we found this reductive and a bit boring as we'd never understand the project as a whole and wouldn't be able to easily debug / fix leaks stemming from the other person's code. Bref, I'm very happy we didn't divide it up like this it saved us time and I'm pleased I understand the whole project. AND this made the microshell exam afterwards feel like a piece of cake :)
-- Try not to burnout and take a GOOD OLD REST afterwards, you've earnt it.
+We ended up splitting the project into:
+- parsing
+- understanding the maths behing raycasting (trigonometry++)
+- 2D movements and wall collisions
+- 2D 'raycasting' where lines of pixels are projected from the player position and stop at walls in the map (this code isn't used in the end but it's an interesting step to go through anyway)
+- 3D raycasting calculating wall height and using mlx_put_pixel to display a ceiling, floor and walls (big step)
+- 3D raycasting with textures (images in xpm format) on the walls- replacing put_pixel with a screen buffer, using which you can directly update the colour each pixel of the screen
 
-Minihell is over- we moving up in the world :nerd_face:
+In the end I dipped in and out of lots of different resources and restarted my raycasting three times...
+- I used [this site](https://demoman.net/?a=trig-for-games) to help understand the maths behing raycasting.
+- [This video](https://www.youtube.com/watch?v=U0_ONQQ5ZNM) helped me visualise how the maths transforms into 3D images.
+- [This video](https://www.youtube.com/watch?v=NbSee-XM7WA) is a nice intro into the DDA algorithm (not as complicated as its name makes it seem- it's basically just a way of saving computer resources by not checking for wall collisions at every pixel or every square of your map, but only at relevant square intersections).
+- Here are some tutorials I used, though I found none of them sufficienly clear on its own once in the middle of the 3D raycasting part: [1](https://lodev.org/cgtutor/raycasting.html), [2](https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/), [3](https://medium.com/@rtailidounia/raycasting-in-cub3d-42-network-project-a-practical-tutorial-using-vectors-68eeb16b3de2). Would recommend renaming your variables and crossreferencing multiple raycasting codes if they're not that clear for you either.
+- [Here's one very concise raycasting code](https://github.com/l-yohai/cub3d/blob/master/mlx_example/01_untextured_raycast.c) split into textured and untextured- interesting to play about with (though be careful not to mix up x and y as they have at certain points).
 
-**Reading:** _The Goldfinch_ by Donna Tartt
+Excited to finally move on from C and to stop dreaming about x and y coordinates :upside_down_face:
 
-And unlocking new levels of code dreaming (we're dreaming in 3D code now folks, my functions are rooms, send help)
+**Reading:** _Grand Union_ Short stories by Zadie Smith.
