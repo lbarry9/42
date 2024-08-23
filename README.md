@@ -21,10 +21,10 @@ After surviving the _piscine_, now the real challenge begins...
 
 **Side Projects:**
 - French literacy classes for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
-- periodic English tutoring classes with one of my old students
-- teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023
-- taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023
-- helping subtitle my friend's adventure documentary (FR -> EN) in autumn 2023
+- English tutoring classes with one of my old students
+- teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023 - 06/2024
+- taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023 - 06/2024
+- helping subtitle (FR -> EN) a friend's adventure documentary in autumn 2023
 
 **Book Club:**
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
