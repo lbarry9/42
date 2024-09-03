@@ -16,6 +16,7 @@ After surviving the _piscine_, now the real challenge begins...
 - minishell (april 2024)
 - netpractice (april 2024)
 - cub3d (june 2024)
+- C++ bootcamp modules 1-5 (july 2024)
 - friday nights
 - a large portion of my sanity
 
