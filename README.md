@@ -8,7 +8,7 @@ After surviving the _piscine_, now the real challenge begins...
 - my libft library (june 2023)
 - ft_printf (june 2023)
 - get next line (july 2023)
-- (I'm definitely not)born to be root (july 2023)
+- born to be root (july 2023)
 - so long (and thank you for the fish) (oct 2023)
 - push swap (dec 2023)
 - pipex (feb 2024)
@@ -16,7 +16,7 @@ After surviving the _piscine_, now the real challenge begins...
 - minishell (april 2024)
 - netpractice (april 2024)
 - cub3d (june 2024)
-- C++ bootcamp modules 1-5 (july 2024)
+- C++ piscine modules (july - sept 2024)
 - friday nights
 - a large portion of my sanity
 
@@ -35,3 +35,4 @@ After surviving the _piscine_, now the real challenge begins...
 - _The Goldfinch_ by Donna Tarrt
 - _Grand Union_ collection of short stories by Zadie Smith
 - _The Wake-Up Call_ by Beth O'Leary
+- _Best of Friends_ by Kamila Shamsie
