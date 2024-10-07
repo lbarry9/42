@@ -15,8 +15,8 @@ Cub3d wasn't the easiest project to get my head around- even as someone who does
 - 2D 'raycasting' where lines of pixels are projected from the player position and stop at walls in the map (this code isn't used in the end but it's an interesting step to go through anyway)
 - 3D raycasting with block coloured walls- calculating wall height and using mlx_pixel_put to display a ceiling, floor and walls in different colours
 - checking player FOV rotations work and that wall colours match up with the direction in which the player spawns (N, E, S or W)
-- 3D raycasting with wall textures (images in xpm format)- replacing put pixel with a screen buffer (essentially a pointer to the memory address for every pixel of your computer screen, using which you can directly update each pixel's colour using all your previous calculations and texture info)
-- we added a function which allows you to rotate the player's FOV using the mouse cursor instead of the keyboard arrows
+- 3D raycasting with wall textures (images in xpm format)- replacing mlx_pixel_put with a screen buffer (essentially a pointer to the memory address for every pixel of your computer screen, using which you can directly update each pixel's colour using all your previous calculations and texture info)
+- we added a function which allows you to rotate the player's FOV using the mouse cursor instead of the keyboard arrows (one of the project bonuses)
 
 **In the end I dipped in and out of lots of different resources and restarted my raycasting three times...**
 - I used [this site](https://demoman.net/?a=trig-for-games) to help understand the maths behing raycasting.
