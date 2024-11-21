@@ -17,6 +17,7 @@ After surviving the _piscine_, now the real challenge begins...
 - netpractice (april 2024)
 - cub3d (june 2024)
 - C++ piscine modules (july - sept 2024)
+- Webserv (nov 2024)
 - friday nights
 - a large portion of my sanity
 
@@ -36,3 +37,4 @@ After surviving the _piscine_, now the real challenge begins...
 - _Grand Union_ collection of short stories by Zadie Smith
 - _The Wake-Up Call_ by Beth O'Leary
 - _Best of Friends_ by Kamila Shamsie
+- _The Happy Couple_ by Naoise Dolan
