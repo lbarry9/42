@@ -20,7 +20,7 @@ This project was no mean feat... Lots to implement and lots of room for error an
 - Cookies tracking session ID
 
 **Resources for understanding the basic concepts:**
-- [select/poll/epoll](https://www.youtube.com/watch?v=H9N_l85TpnI), [epoll](https://copyconstruct.medium.com/the-method-to-epolls-madness-d9d2d6378642) in more detail
+- [select/poll/epoll](https://www.youtube.com/watch?v=H9N_l85TpnI), epoll [in more detail](https://copyconstruct.medium.com/the-method-to-epolls-madness-d9d2d6378642)
 - [TCP vs UDP](https://www.youtube.com/watch?v=uwoD5YsGACg)
 - [HTTP requests](https://www.youtube.com/watch?v=-Zea7GB2OwA)
 - [web sockets](https://www.youtube.com/watch?v=pnj3Jbho5Ck)
