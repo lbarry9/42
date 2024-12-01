@@ -24,7 +24,7 @@ This project was no mean feat... Lots to implement and lots of room for error an
 - [TCP vs UDP](https://www.youtube.com/watch?v=uwoD5YsGACg)
 - [HTTP requests](https://www.youtube.com/watch?v=-Zea7GB2OwA)
 - [web sockets](https://www.youtube.com/watch?v=pnj3Jbho5Ck)
-- For the NGINX inspired config file: [its structure](http://nginx.org/en/docs/beginners_guide.html), [implementing server_name](https://statuslist.app/nginx/server_name/)
+- For the NGINX inspired config file: its [structure](http://nginx.org/en/docs/beginners_guide.html); implementing [server_name](https://statuslist.app/nginx/server_name/)
 
 **Reading:**
 - _The Happy Couple_ by Naoise Dolan
