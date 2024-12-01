@@ -22,7 +22,7 @@ After surviving the _piscine_, now the real challenge begins...
 - a large portion of my sanity
 
 **Side Projects:**
-- Coordinating French literacy classes for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
+- Coordinator and French Literacy Teacher for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
 - English tutoring classes with one of my old students
 - teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023 - 06/2024
 - taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023 - 06/2024
