@@ -1,4 +1,4 @@
-# Creating a HTTP server in C++ with my mate [amben-ha](https://github.com/AmYre)
+# Creating a HTTP server in C++ with my mates [amben-ha](https://github.com/AmYre) and [mvachera](https://github.com/mvachera)
 
 **Our webserver had to be very robust, handling as many server blocks as specified in the config file, and withstanding the dreaded load testing created by Siege.**
 
