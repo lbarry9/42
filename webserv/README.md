@@ -17,7 +17,7 @@ This project was no mean feat... Lots to implement and lots of room for error an
 - modifable method permissions for different routes
 - default files and directory indexing
 - CGI's for GET and POST
-- Cookies tracking session ID
+- Cookies for tracking session ID
 
 **Resources for understanding the basic concepts:**
 - [select/poll/epoll](https://www.youtube.com/watch?v=H9N_l85TpnI), epoll [in more detail](https://copyconstruct.medium.com/the-method-to-epolls-madness-d9d2d6378642)
