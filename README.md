@@ -38,3 +38,4 @@ After surviving the _piscine_, now the real challenge begins...
 - _The Wake-Up Call_ by Beth O'Leary
 - _Best of Friends_ by Kamila Shamsie
 - _The Happy Couple_ by Naoise Dolan
+- _The Fraud_ by Zadie Smith
