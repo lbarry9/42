@@ -6,8 +6,15 @@ RUN apt-get update && apt-get upgrade -y
 # used to serve PHP apps in web server env
 RUN apt-get install -y wget php7.3 php-fpm php-mysql mariadb-client zsh git curl netcat mycli
 
-COPY /conf/wordpress.sh /
+# Install WP-CLI command line inferface for WordPress
+RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x wp-cli.phar \
+    && mv wp-cli.phar /usr/local/bin/wp
+	
+EXPOSE 9000
 
+# Copy configuration files and give permissions
+COPY /conf/wordpress.sh /
 RUN  chmod +x wordpress.sh
 
 ENTRYPOINT ["./wordpress.sh"]

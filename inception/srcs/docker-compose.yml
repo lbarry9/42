@@ -2,13 +2,22 @@ services:
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb # need this line?
-    restart: always # look at other options
+    restart: unless-stopped
+    expose:
+      - "3306"
     volumes:
       - mariadb:/var/lib/mysql
     networks:
       - inception
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--password=${DB_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 1s
+      retries: 20
+      start_period: 5s
+      
   nginx:
     container_name: nginx
     depends_on:
@@ -24,10 +33,18 @@ services:
       - inception
     env_file:
       - .env
+    healthcheck:
+      test: 'curl -kfsSL https://localhost:443/status'
+      interval: 5s
+      timeout: 1s
+      retries: 10
+      start_period: 5s
+
   wordpress:
     container_name: wordpress
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
     build: ./requirements/wordpress
     restart: always
     volumes:
@@ -36,6 +53,7 @@ services:
       - inception
     env_file:
       - .env
+
 volumes:
   mariadb:
     driver: local
