@@ -1,7 +1,8 @@
 services:
   mariadb:
     container_name: mariadb
-    build: ./requirements/mariadb # need this line?
+    build: ./requirements/mariadb
+    image: mariadb
     restart: unless-stopped
     expose:
       - "3306"
@@ -23,6 +24,7 @@ services:
     depends_on:
       - wordpress
     build: ./requirements/nginx
+    image: nginx
     restart: always
     ports:
       - "443:443"
@@ -33,12 +35,6 @@ services:
       - inception
     env_file:
       - .env
-    healthcheck:
-      test: 'curl -kfsSL https://localhost:443/status'
-      interval: 5s
-      timeout: 1s
-      retries: 10
-      start_period: 5s
 
   wordpress:
     container_name: wordpress
@@ -46,6 +42,7 @@ services:
       mariadb:
         condition: service_healthy
     build: ./requirements/wordpress
+    image: wordpress
     restart: always
     volumes:
       - wordpress:/var/www/wordpress

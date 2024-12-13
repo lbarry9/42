@@ -21,10 +21,13 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/ngin
 # certficate read only for all but owner- common practice
 RUN chmod 644 /etc/nginx/ssl/inception.key /etc/nginx/ssl/inception.crt
 
+# Create directory to store NGINX PID file
 RUN mkdir -p /var/run/nginx
 
+# Copy the configuration file from the current directory and paste it inside the container
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 
+# Use port 443
 EXPOSE 443
 
 # Start NGINX in the foreground

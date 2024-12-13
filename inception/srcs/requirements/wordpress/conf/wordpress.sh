@@ -13,7 +13,7 @@ find /var/www/wordpress/ -mindepth 1 -delete
 # download latest version and make sure download is finished before next cmds
 wp core download --allow-root --path="/var/www/wordpress"
 
-# admin or db??
+# ensure mariadb is running before continuing
 sleep 10
 
 # configures wordpress to connect to mariadb database
@@ -30,5 +30,5 @@ wp cache flush --allow-root
 sed -i '36 s@/run/php/php7.4-fpm.sock@9000@' /etc/php/7.4/fpm/pool.d/www.conf
 mkdir -p /run/php
 
-# start in foregrand so continues running in container
+# start in foreground so continues running in container
 /usr/sbin/php-fpm7.4 -F
