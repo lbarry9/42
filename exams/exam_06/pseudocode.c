@@ -10,25 +10,32 @@
 
 // send to all function - send message to all clients except the client sending message
 
-// main 
+// main
 
 	// parsing
-	
-	// modified bit from main
-	
+
+	// modified bit from main- BIND, LISTEN
+
 	// while
-		// update readable and writable sets to current_set
-		// if there's no event to listen to, continue
+		// update current_set
+		// is there an event to listen to? SELECT - if not, continue
 		// loop through fds
-			// is something readable?
+			// is it readable?
 				// is it the server?
-					// accept client trying to communicate with server, add to set, announce (9 lines)
+					// ACCEPT client trying to comm with server, add to set, announce (9 lines)
 				// else its a client
-					// recv data from client
-					// if msg length <= 0, client left
-						//announce and close (5 lines)
-					// else interpret message and send to all 
-						// stock recv_buffer in clients struct
-				// break - only one client event handled per loop, then server refeshes socket states and returns to begginning of loop
-				// (prevents getting stuck on one overactive client)
+					// RECV message from client
+					// if msg_len <= 0, client left
+						// announce and close (5 lines)
+					// else interpret message and send to all
+						// for i/ j
+							// stock msg from recv_buffer to clients struct .msg char by char
+							// if new line
+								// null terminate and send message to all, bzero .msg, reset j (5 lines)
+				// break
 	// return (0)
+
+
+// why the break?
+// - only one client event handled per loop, then server refeshes socket states and returns to begginning of loop
+// (prevents getting stuck on one overactive client)

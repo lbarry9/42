@@ -36,7 +36,7 @@ void send_to_all(int except)
 		if (FD_ISSET(fd, &writable) && fd != except)
 		{
 			if (send(fd, send_buffer, strlen(send_buffer), 0) == -1)
-				my_err(NULL);				
+				my_err(NULL);
 		}
 	}
 }
@@ -46,7 +46,7 @@ int main(int arc, char **argv)
 	// parsing
 	if (arc != 2)
 		my_err("Wrong number of arguments");
-	
+
 	// ------- modified bit from main -------
 	struct sockaddr_in servaddr, cli_addr; // modified var names
 	socklen_t len = sizeof(cli_addr); // len int -> socklen_t, deleted 2 other vars
@@ -55,13 +55,13 @@ int main(int arc, char **argv)
 	if (server_fd == -1)
 		my_err(NULL); // use err func, don't need else
 	max_fd = server_fd; // added this init
-	
+
 	FD_ZERO(&current_set); // added
 	FD_SET(server_fd, &current_set); // added
-	bzero(&servaddr, sizeof(servaddr)); 
+	bzero(&servaddr, sizeof(servaddr));
 	bzero(clients, sizeof(clients)); // added
-	 
-	servaddr.sin_family = AF_INET; 
+
+	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(2130706433);
 	servaddr.sin_port = htons(atoi(argv[1])); // swap port for atoi(av[1])
 
@@ -70,11 +70,11 @@ int main(int arc, char **argv)
 	if (listen(server_fd, 10) == -1)
 		my_err(NULL); // use err func, don't need else
 	// ------- end of modified bit from main -------
-	
+
 	while (1)
 	{
 		readable = writable = current_set;
-		
+
 		if (select(max_fd + 1, &readable, &writable, 0, 0) == -1)
 			continue;
 		for (int fd = 0; fd <= max_fd; fd++)
@@ -91,9 +91,9 @@ int main(int arc, char **argv)
 					FD_SET(client_fd, &current_set);
 					clients[client_fd].id = uuid++;
 					sprintf(send_buffer, "server: client %d just arrived\n", clients[client_fd].id);
-					send_to_all(fd);						
+					send_to_all(fd);
 				}
-				else 
+				else
 				{
 					int msg_len = recv(fd, recv_buffer, sizeof(recv_buffer), 0);
 					if (msg_len <= 0)
@@ -117,7 +117,7 @@ int main(int arc, char **argv)
 								bzero(clients[fd].msg, strlen(clients[fd].msg));
 								j = -1;
 							}
-							
+
 						}
 					}
 				}
