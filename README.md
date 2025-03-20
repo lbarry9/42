@@ -23,11 +23,12 @@ After surviving the _piscine_, now the real challenge begins...
 - a large portion of my sanity
 
 **Side Projects:**
-- Coordinator and French Literacy Teacher for Association Franco Africaine des Femmes Parisiennes- charity in Paris 13eme
-- English tutoring classes with one of my old students
-- teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023 - 06/2024
-- taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023 - 06/2024
-- helping subtitle (FR -> EN) a friend's adventure documentary in autumn 2023
+- Coordinator and French Literacy Teacher for Association Franco Africaine des Femmes Parisiennes (AFAFP)- charity in Paris 13eme
+- English tutoring classes with one of my old students in 2023
+- Helping subtitle (FR -> EN) a friend's adventure documentary in autumn 2023
+- Teaching coding (Scratch) workshops for kids with Magic Makers from 09/2023 - 06/2024
+- Taking Arabic classes (cours d'adultes, Mairie de Paris) from 09/2023 - 06/2024
+- Building and maintaining a new website for AFAFP charity from December 2024 onwards
 
 **Book Club:**
 - (forever dipping in and out of) _Invisible Women_ by Caroline Criado-Perez
